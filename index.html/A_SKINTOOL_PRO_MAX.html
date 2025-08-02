@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Skin Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #111, #333);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: gold;
+    }
+    .credit {
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .bundle {
+      border: 1px solid #555;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px auto;
+      background-color: #222;
+      width: 90%;
+    }
+    .bundle img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: gold;
+      color: black;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:disabled {
+      background-color: grey;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome, ANUBHAV</h1>
+  <div class="credit">Credited to ChatGPT</div>
+
+  <p>Follow my Instagram first to continue:</p>
+  <a href="https://instagram.com/instauser1691993" target="_blank">
+    <button id="followBtn">Follow @instauser1691993</button>
+  </a>
+  <br/>
+  <button id="startBtn" disabled>Start</button>
+
+  <div id="bundles" class="hidden">
+    <div class="bundle">
+      <h2>Ajjubhai Bundle (on Wolfrahh)</h2>
+      <img src="https://via.placeholder.com/300x180?text=Ajjubhai+Bundle" />
+      <button onclick="applyBundle('Ajjubhai on Wolfrahh')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Amitbhai Bundle (on Hayato)</h2>
+      <img src="https://via.placeholder.com/300x180?text=Amitbhai+Bundle" />
+      <button onclick="applyBundle('Amitbhai on Hayato')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Golden Criminal (on Wukong)</h2>
+      <img src="https://via.placeholder.com/300x180?text=Golden+Criminal" />
+      <button onclick="applyBundle('Golden Criminal on Wukong')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Hip Hop Bundle (on K)</h2>
+      <img src="https://via.placeholder.com/300x180?text=Hip+Hop+Bundle" />
+      <button onclick="applyBundle('Hip Hop on K')">Apply</button>
+    </div>
+
+    <!-- Elite Pass S1 to S10 alternating on Shiru and Nairi -->
+    <div class="bundle">
+      <h2>Elite Pass S1 (on Shiru)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S1" />
+      <button onclick="applyBundle('S1 on Shiru')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Elite Pass S2 (on Nairi)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S2" />
+      <button onclick="applyBundle('S2 on Nairi')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Elite Pass S3 (on Shiru)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S3" />
+      <button onclick="applyBundle('S3 on Shiru')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Elite Pass S4 (on Nairi)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S4" />
+      <button onclick="applyBundle('S4 on Nairi')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Elite Pass S5 (on Shiru)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S5" />
+      <button onclick="applyBundle('S5 on Shiru')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Elite Pass S6 (on Nairi)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S6" />
+      <button onclick="applyBundle('S6 on Nairi')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Elite Pass S7 (on Shiru)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S7" />
+      <button onclick="applyBundle('S7 on Shiru')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Elite Pass S8 (on Nairi)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S8" />
+      <button onclick="applyBundle('S8 on Nairi')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Elite Pass S9 (on Shiru)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S9" />
+      <button onclick="applyBundle('S9 on Shiru')">Apply</button>
+    </div>
+    <div class="bundle">
+      <h2>Elite Pass S10 (on Nairi)</h2>
+      <img src="https://via.placeholder.com/300x180?text=EP+S10" />
+      <button onclick="applyBundle('S10 on Nairi')">Apply</button>
+    </div>
+  </div>
+
+  <script>
+    const startBtn = document.getElementById('startBtn');
+    const bundles = document.getElementById('bundles');
+
+    document.getElementById('followBtn').addEventListener('click', () => {
+      setTimeout(() => {
+        startBtn.disabled = false;
+        alert('Now you can click Start');
+      }, 3000); // wait 3 seconds
+    });
+
+    startBtn.addEventListener('click', () => {
+      bundles.classList.remove('hidden');
+      startBtn.style.display = 'none';
+    });
+
+    function applyBundle(name) {
+      alert('✔ Bundle "' + name + '" applied successfully!');
+    }
+  </script>
+</body>
+</html>
